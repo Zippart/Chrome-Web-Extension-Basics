@@ -8,12 +8,12 @@ for (var i = 0; i < elements.length; i++) {
         var node = element.childNodes[j];
 
         if (node.nodeType === 3) {
-            var text = node.nodeValue;
-            var replacedText = text.replace(/pear/gi, 'kumquat');
-            var replacedTextTwo = text.replace(/apple/gi, 'kumquat');
+            var text = node.nodeValue;                          //defines variables that replace
+            var replacedText = text.replace(/pear/gi, 'kumquat'); //first word replace   |    pear to kumquat
+            var replacedTextTwo = text.replace(/apple/gi, 'kumquat'); //second word replace  |  apple to kumquat
 
             if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
+                element.replaceChild(document.createTextNode(replacedText), node);  //actually replaces
             }
 
             if (replacedTextTwo !== text) {
