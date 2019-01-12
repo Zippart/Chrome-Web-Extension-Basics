@@ -1,0 +1,21 @@
+{
+"manifest_version": 2,
+    "name": "Word Switcheroo",
+    "description": "changes all the words...",
+    "version": "1.0",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
